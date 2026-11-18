@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hecto Furniture Studio — Dashboard Overview. View total revenue, orders, products, and customer analytics at a glance.">
+  <title>Hecto — Dashboard Overview</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <h1>Hecto</h1>
+        <p>Admin Portal</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active" id="nav-dashboard">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+          Dashboard
+        </a>
+        <a href="products.html" class="nav-item" id="nav-products">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg>
+          </span>
+          Products/Inventory
+        </a>
+        <a href="orders.html" class="nav-item" id="nav-orders">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </span>
+          Orders
+        </a>
+        <a href="analytics.html" class="nav-item" id="nav-analytics">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </span>
+          Analytics
+        </a>
+        <a href="discounts.html" class="nav-item" id="nav-discounts">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 7h.01M17 17h.01M7 17L17 7M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          Discounts &amp; Pricing
+        </a>
+        <a href="settings.html" class="nav-item" id="nav-settings">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="images/avatar.jpg" alt="Alexander H." id="user-avatar">
+        <div class="sidebar-user-info">
+          <h4>Alexander H.</h4>
+          <p>Studio Director</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Dashboard Overview</h1>
+        <div class="header-actions">
+          <div class="search-bar" id="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search administration..." id="search-input">
+          </div>
+          <button class="notification-btn" id="notification-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+            <span class="badge"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <!-- KPI Cards -->
+        <div class="kpi-grid" id="kpi-grid">
+          <div class="kpi-card" id="kpi-revenue">
+            <div class="kpi-label">Total Revenue</div>
+            <div class="kpi-value-row">
+              <span class="kpi-value">₹284,500</span>
+              <span class="kpi-change positive">+12.5%</span>
+            </div>
+          </div>
+          <div class="kpi-card" id="kpi-orders">
+            <div class="kpi-label">Total Orders</div>
+            <div class="kpi-value-row">
+              <span class="kpi-value">1,247</span>
+              <span class="kpi-change positive">+8.2%</span>
+            </div>
+          </div>
+          <div class="kpi-card" id="kpi-products">
+            <div class="kpi-label">Active Products</div>
+            <div class="kpi-value-row">
+              <span class="kpi-value">438</span>
+              <span class="kpi-change stable">Stable</span>
+            </div>
+          </div>
+          <div class="kpi-card" id="kpi-customers">
+            <div class="kpi-label">New Customers</div>
+            <div class="kpi-value-row">
+              <span class="kpi-value">89</span>
+              <span class="kpi-change negative">-2.4%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="content-grid">
+          <!-- Sales Trend Chart -->
+          <div class="card" id="sales-trend-card">
+            <div class="card-header">
+              <h2 class="card-title">Sales Trend (6 Months)</h2>
+              <span class="card-subtitle">YTD 2026</span>
+            </div>
+            <div class="chart-area">
+              <svg class="chart-svg" viewBox="0 0 500 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a1a1a" stop-opacity="0.12"/>
+                    <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid Lines -->
+                <line x1="0" y1="50" x2="500" y2="50" class="chart-grid-line"/>
+                <line x1="0" y1="100" x2="500" y2="100" class="chart-grid-line"/>
+                <line x1="0" y1="150" x2="500" y2="150" class="chart-grid-line"/>
+                <!-- Area Fill -->
+                <path d="M0,160 L83,130 L166,90 L250,110 L333,70 L416,50 L500,40 L500,200 L0,200 Z" class="chart-area-fill"/>
+                <!-- Line -->
+                <path d="M0,160 L83,130 L166,90 L250,110 L333,70 L416,50 L500,40" class="chart-path"/>
+                <!-- Dots -->
+                <circle cx="0" cy="160" class="chart-dot"/>
+                <circle cx="83" cy="130" class="chart-dot"/>
+                <circle cx="166" cy="90" class="chart-dot"/>
+                <circle cx="250" cy="110" class="chart-dot"/>
+                <circle cx="333" cy="70" class="chart-dot"/>
+                <circle cx="416" cy="50" class="chart-dot"/>
+                <circle cx="500" cy="40" class="chart-dot"/>
+              </svg>
+            </div>
+            <div class="chart-labels">
+              <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+            </div>
+          </div>
+
+          <!-- Recent Orders -->
+          <div class="card" id="recent-orders-card">
+            <div class="card-header">
+              <h2 class="card-title">Recent Orders</h2>
+            </div>
+            <div class="order-list">
+              <div class="order-item" id="order-1024">
+                <span class="order-id">#1024</span>
+                <span class="order-customer">John Doe</span>
+                <span class="order-amount">₹1,850</span>
+                <span class="status-badge delivered">Delivered</span>
+              </div>
+              <div class="order-item" id="order-1023">
+                <span class="order-id">#1023</span>
+                <span class="order-customer">Sarah Smith</span>
+                <span class="order-amount">₹950</span>
+                <span class="status-badge processing">Processing</span>
+              </div>
+              <div class="order-item" id="order-1022">
+                <span class="order-id">#1022</span>
+                <span class="order-customer">Michael Torres</span>
+                <span class="order-amount">₹2,400</span>
+                <span class="status-badge shipped">Shipped</span>
+              </div>
+              <div class="order-item" id="order-1021">
+                <span class="order-id">#1021</span>
+                <span class="order-customer">Emily Okonkwo</span>
+                <span class="order-amount">₹680</span>
+                <span class="status-badge delivered">Delivered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="content-grid equal">
+          <!-- Popular Curations -->
+          <div class="card" id="popular-curations-card">
+            <div class="card-header">
+              <h2 class="card-title">Popular Curations</h2>
+            </div>
+            <div class="curation-list">
+              <div class="curation-item">
+                <img src="images/product-chair.jpg" alt="Meridian Lounge Chair" class="curation-img">
+                <div class="curation-info">
+                  <h4>Meridian Lounge Chair</h4>
+                  <p>184 orders</p>
+                </div>
+                <span class="curation-price">₹1,299</span>
+              </div>
+              <div class="curation-item">
+                <img src="images/product-armchair.jpg" alt="Hale Bouclé Armchair" class="curation-img">
+                <div class="curation-info">
+                  <h4>Hale Bouclé Armchair</h4>
+                  <p>112 orders</p>
+                </div>
+                <span class="curation-price">₹1,850</span>
+              </div>
+              <div class="curation-item">
+                <img src="images/product-table.jpg" alt="Monolith Travertine Table" class="curation-img">
+                <div class="curation-info">
+                  <h4>Monolith Travertine Table</h4>
+                  <p>94 orders</p>
+                </div>
+                <span class="curation-price">₹950</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory Alerts -->
+          <div class="card" id="inventory-alerts-card">
+            <div class="card-header">
+              <h2 class="card-title">Inventory Alerts</h2>
+            </div>
+            <div class="alert-list">
+              <div class="alert-item">
+                <span class="alert-name">Aura Slat Bed</span>
+                <span class="alert-badge warning">Only 2 left</span>
+              </div>
+              <div class="alert-item">
+                <span class="alert-name">Arc Brass Floor Lamp</span>
+                <span class="alert-badge danger">Out of Stock</span>
+              </div>
+              <div class="alert-item">
+                <span class="alert-name">Bastion Oak Cabinet</span>
+                <span class="alert-badge warning">Only 4 left</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

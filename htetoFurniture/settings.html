@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hecto Furniture Studio — Settings. Configure studio profile, notifications, and account preferences.">
+  <title>Hecto — Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <h1>Hecto</h1>
+        <p>Admin Portal</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item" id="nav-dashboard">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+          Dashboard
+        </a>
+        <a href="products.html" class="nav-item" id="nav-products">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg>
+          </span>
+          Products/Inventory
+        </a>
+        <a href="orders.html" class="nav-item" id="nav-orders">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </span>
+          Orders
+        </a>
+        <a href="analytics.html" class="nav-item" id="nav-analytics">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </span>
+          Analytics
+        </a>
+        <a href="discounts.html" class="nav-item" id="nav-discounts">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 7h.01M17 17h.01M7 17L17 7M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          Discounts &amp; Pricing
+        </a>
+        <a href="settings.html" class="nav-item active" id="nav-settings">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="images/avatar.jpg" alt="Alexander H." id="user-avatar">
+        <div class="sidebar-user-info">
+          <h4>Alexander H.</h4>
+          <p>Studio Director</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Settings</h1>
+        <div class="header-actions">
+          <div class="search-bar" id="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search administration..." id="search-input">
+          </div>
+          <button class="notification-btn" id="notification-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+            <span class="badge"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="settings-grid" id="settings-section">
+          <!-- Settings Navigation -->
+          <div class="settings-nav" id="settings-nav">
+            <div class="settings-nav-item active" id="settings-nav-profile">Studio Profile</div>
+            <div class="settings-nav-item" id="settings-nav-account">Account Security</div>
+            <div class="settings-nav-item" id="settings-nav-notifications">Notifications</div>
+            <div class="settings-nav-item" id="settings-nav-shipping">Shipping &amp; Tax</div>
+            <div class="settings-nav-item" id="settings-nav-integrations">Integrations</div>
+          </div>
+
+          <!-- Settings Content -->
+          <div class="settings-content" id="settings-content">
+            <!-- Studio Profile Section -->
+            <div class="settings-section" id="settings-studio-profile">
+              <h3>Studio Profile</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="studio-name">Studio Name</label>
+                  <input type="text" id="studio-name" class="form-input" value="Hecto Furnitures">
+                </div>
+                <div class="form-group">
+                  <label for="studio-email">Contact Email</label>
+                  <input type="email" id="studio-email" class="form-input" value="studio@hectofurnitures.com">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="studio-phone">Phone Number</label>
+                  <input type="tel" id="studio-phone" class="form-input" value="+1 (555) 012-3456">
+                </div>
+                <div class="form-group">
+                  <label for="studio-timezone">Timezone</label>
+                  <select id="studio-timezone" class="form-select">
+                    <option value="pst" selected>Pacific Standard Time (PST)</option>
+                    <option value="est">Eastern Standard Time (EST)</option>
+                    <option value="gmt">Greenwich Mean Time (GMT)</option>
+                    <option value="jst">Japan Standard Time (JST)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="studio-address">Studio Address</label>
+                <input type="text" id="studio-address" class="form-input" value="1234 Design Quarter, San Francisco, CA 94102">
+              </div>
+            </div>
+
+            <!-- Currency & Display Section -->
+            <div class="settings-section" id="settings-currency">
+              <h3>Currency &amp; Display</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="currency">Default Currency</label>
+                  <select id="currency" class="form-select">
+                    <option value="inr" selected>INR (₹)</option>
+                    <option value="usd">USD ($)</option>
+                    <option value="eur">EUR (€)</option>
+                    <option value="gbp">GBP (£)</option>
+                    <option value="jpy">JPY (¥)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="date-format">Date Format</label>
+                  <select id="date-format" class="form-select">
+                    <option value="mdy" selected>MM/DD/YYYY</option>
+                    <option value="dmy">DD/MM/YYYY</option>
+                    <option value="ymd">YYYY-MM-DD</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Save -->
+            <div style="display: flex; gap: 12px; justify-content: flex-end;">
+              <button class="btn-secondary" id="btn-cancel-settings">Discard Changes</button>
+              <button class="btn-primary" id="btn-save-settings">Save Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

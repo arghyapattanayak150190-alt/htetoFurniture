@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hecto Furnitures â€” Curated Seating Collection. Shop premium architectural lounge chairs, armchairs, and designer furniture.">
+  <title>Hecto Furnitures â€” Curated Seating</title>
+  <link rel="stylesheet" href="css/client-styles.css">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    COMPLEMENTARY ARCHITECTURAL CONSULTATION ON ALL CURATED ORDERS
+  </div>
+
+  <!-- Navigation -->
+  <nav class="client-nav" id="client-nav">
+    <div class="container">
+      <a href="client-home.html" class="client-brand" id="brand-link">
+        <h1>Hecto</h1>
+        <span>Furnitures</span>
+      </a>
+      <div class="client-nav-links">
+        <a href="client-home.html" class="client-nav-link" id="nav-home">Home</a>
+        <a href="client-shop.html" class="client-nav-link active" id="nav-shop">Shop</a>
+        <a href="client-categories.html" class="client-nav-link" id="nav-categories">Categories</a>
+        <a href="client-about.html" class="client-nav-link" id="nav-about">About</a>
+      </div>
+      <div class="client-nav-actions">
+        <div class="nav-search" id="nav-search">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" placeholder="Search collection..." id="search-input">
+        </div>
+        <a href="client-login.html" class="nav-icon-btn" id="user-icon" title="Login">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="client-cart.html" class="cart-btn" id="cart-btn" title="Cart">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-badge">3</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" id="breadcrumb">
+      <a href="client-home.html">Home</a>
+      <span>/</span>
+      <span>Architectural Lounge Chairs</span>
+    </div>
+
+    <h1 class="page-title" id="page-title">Curated Seating</h1>
+
+    <!-- Shop Layout -->
+    <div class="shop-layout" id="shop-layout">
+      <!-- Sidebar Filters -->
+      <aside class="shop-sidebar" id="shop-sidebar">
+        <!-- Categories -->
+        <div class="filter-section" id="filter-categories">
+          <h3 class="filter-title">Categories</h3>
+          <div class="filter-list">
+            <div class="filter-item active" id="filter-living-room">
+              <span>Living Room</span>
+              <span class="count">(84)</span>
+            </div>
+            <div class="filter-item" id="filter-bedroom">
+              <span>Bedroom</span>
+              <span class="count">(41)</span>
+            </div>
+            <div class="filter-item" id="filter-dining">
+              <span>Dining</span>
+              <span class="count">(37)</span>
+            </div>
+            <div class="filter-item" id="filter-office">
+              <span>Office</span>
+              <span class="count">(28)</span>
+            </div>
+            <div class="filter-item" id="filter-outdoor">
+              <span>Outdoor</span>
+              <span class="count">(18)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Range -->
+        <div class="filter-section" id="filter-price-section">
+          <h3 class="filter-title">Price Range</h3>
+          <div class="price-range">
+            <div class="range-track"></div>
+            <div class="price-labels">
+              <span>₹400</span>
+              <span>₹3,500</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Material -->
+        <div class="filter-section" id="filter-material-section">
+          <h3 class="filter-title">Material</h3>
+          <div class="material-list">
+            <label class="material-item">
+              <span class="material-swatch" style="background: #3d2b1f;"></span>
+              <span>Premium Walnut</span>
+            </label>
+            <label class="material-item">
+              <span class="material-swatch" style="background: #c9b99a; border-color: #b5a58a;"></span>
+              <span>Brushed Brass</span>
+            </label>
+            <label class="material-item">
+              <span class="material-swatch" style="background: #f0e8dc; border-color: #d4ccc2;"></span>
+              <span>Organic Linen</span>
+            </label>
+            <label class="material-item">
+              <span class="material-swatch" style="background: #8b7355;"></span>
+              <span>Nubuck Leather</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Architectural Hue -->
+        <div class="filter-section" id="filter-hue-section">
+          <h3 class="filter-title">Architectural Hue</h3>
+          <div class="hue-swatches">
+            <div class="hue-swatch active" style="background: #2c2c2c;" id="hue-charcoal"></div>
+            <div class="hue-swatch" style="background: #d4b896;" id="hue-sand"></div>
+            <div class="hue-swatch" style="background: #8b8b8b;" id="hue-slate"></div>
+            <div class="hue-swatch" style="background: #f0e8dc;" id="hue-linen"></div>
+            <div class="hue-swatch" style="background: #556b2f;" id="hue-olive"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Area -->
+      <div class="shop-main" id="shop-main">
+        <!-- Shop Toolbar -->
+        <div class="shop-toolbar" id="shop-toolbar">
+          <p class="shop-count">Showing <strong>248</strong> Curated Pieces</p>
+          <div class="shop-controls">
+            <select class="sort-select" id="sort-select">
+              <option value="popularity">Sort: Popularity</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest First</option>
+            </select>
+            <div class="view-toggle" id="view-toggle">
+              <button class="view-btn active" id="view-grid" title="Grid view">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </button>
+              <button class="view-btn" id="view-list" title="List view">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card" id="product-meridian">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-chair.jpg" alt="Meridian Lounge Chair" class="product-card-img">
+              <span class="sale-tag">Sale</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Meridian Lounge Chair</h3>
+              <p class="product-card-price">₹1,299 <span class="old-price">₹1,650</span></p>
+              <button class="btn-add-cart" id="add-cart-meridian">ADD TO CART</button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" id="product-hale">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-armchair.jpg" alt="Hale BouclÃ© Armchair" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Hale BouclÃ© Armchair</h3>
+              <p class="product-card-price">₹1,850</p>
+              <button class="btn-add-cart" id="add-cart-hale">ADD TO CART</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" id="product-bastion">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-cabinet.jpg" alt="Bastion Oak Cabinet" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Bastion Oak Cabinet</h3>
+              <p class="product-card-price">₹2,100</p>
+              <button class="btn-add-cart" id="add-cart-bastion">ADD TO CART</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" id="product-monolith">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-table.jpg" alt="Monolith Travertine Table" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Monolith Travertine Table</h3>
+              <p class="product-card-price">₹950</p>
+              <button class="btn-add-cart" id="add-cart-monolith">ADD TO CART</button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" id="product-aura">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-bed.jpg" alt="Aura Slat Bed" class="product-card-img">
+              <span class="sale-tag">Sale</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Aura Slat Bed</h3>
+              <p class="product-card-price">₹2,400 <span class="old-price">₹2,950</span></p>
+              <button class="btn-add-cart" id="add-cart-aura">ADD TO CART</button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" id="product-arc">
+            <div class="product-card-img-wrapper">
+              <img src="images/product-lamp.jpg" alt="Arc Brass Floor Lamp" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <div class="product-rating">
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="product-card-name">Arc Brass Floor Lamp</h3>
+              <p class="product-card-price">₹680</p>
+              <button class="btn-add-cart" id="add-cart-arc">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="client-pagination" id="shop-pagination">
+          <button class="client-page-btn active" id="shop-page-1">1</button>
+          <button class="client-page-btn" id="shop-page-2">2</button>
+          <button class="client-page-btn" id="shop-page-3">3</button>
+          <button class="client-page-btn" id="shop-page-next">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="client-footer" id="client-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Hecto</h2>
+          <p class="footer-brand-sub">Furnitures</p>
+          <p>Architectural masterpieces crafted by generational artisans. Designing internal sanctuaries for inspired modern living.</p>
+        </div>
+        <div class="footer-col"><h3>Collections</h3><ul><li><a href="#">Living Room</a></li><li><a href="#">Bedroom Sanctuary</a></li><li><a href="#">Dining &amp; Kitchen</a></li><li><a href="#">Minimalist Office</a></li></ul></div>
+        <div class="footer-col"><h3>Inspiration</h3><ul><li><a href="#">Studio Journal</a></li><li><a href="#">Architect Portfolios</a></li><li><a href="#">Sustainability Pledge</a></li><li><a href="#">Custom Commissions</a></li></ul></div>
+        <div class="footer-col"><h3>Customer Service</h3><ul><li><a href="#">White-Glove Delivery</a></li><li><a href="#">Care &amp; Maintenance</a></li><li><a href="#">Return Policy</a></li><li><a href="#">FAQ</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 HectoFurnitures. Architecturally curated worldwide.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="footer-social" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="footer-social" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

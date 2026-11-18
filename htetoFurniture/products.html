@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hecto Furniture Studio — Inventory Management. Manage products, stock levels, and categories.">
+  <title>Hecto — Inventory Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <h1>Hecto</h1>
+        <p>Admin Portal</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item" id="nav-dashboard">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+          Dashboard
+        </a>
+        <a href="products.html" class="nav-item active" id="nav-products">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10"/></svg>
+          </span>
+          Products/Inventory
+        </a>
+        <a href="orders.html" class="nav-item" id="nav-orders">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </span>
+          Orders
+        </a>
+        <a href="analytics.html" class="nav-item" id="nav-analytics">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </span>
+          Analytics
+        </a>
+        <a href="discounts.html" class="nav-item" id="nav-discounts">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 7h.01M17 17h.01M7 17L17 7M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          Discounts &amp; Pricing
+        </a>
+        <a href="settings.html" class="nav-item" id="nav-settings">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="images/avatar.jpg" alt="Alexander H." id="user-avatar">
+        <div class="sidebar-user-info">
+          <h4>Alexander H.</h4>
+          <p>Studio Director</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Inventory Management</h1>
+        <div class="header-actions">
+          <div class="search-bar" id="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search administration..." id="search-input">
+          </div>
+          <button class="notification-btn" id="notification-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+            <span class="badge"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <!-- Toolbar -->
+        <div class="toolbar" id="products-toolbar">
+          <div class="toolbar-left">
+            <div class="filter-btn" id="filter-category">
+              Category: All Lounge
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="filter-btn" id="filter-stock">
+              Stock: In Stock
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="toolbar-right">
+            <button class="btn-primary" id="btn-add-product">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              Add New Product
+            </button>
+          </div>
+        </div>
+
+        <!-- Bulk Actions -->
+        <div class="bulk-actions" id="bulk-actions">
+          <input type="checkbox" id="select-all">
+          <label for="select-all">2 Products selected</label>
+          <button class="btn-secondary" id="btn-delete-selected">Delete Selected</button>
+          <button class="btn-secondary" id="btn-edit-category">Edit Category</button>
+        </div>
+
+        <!-- Products Table -->
+        <table class="data-table" id="products-table">
+          <thead>
+            <tr>
+              <th style="width: 40px;"><input type="checkbox" id="th-select-all"></th>
+              <th>Image</th>
+              <th>Product Name</th>
+              <th>SKU</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="product-row-1">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-chair.jpg" alt="Meridian Lounge Chair" class="product-thumb"></td>
+              <td class="product-name-cell">Meridian Lounge Chair</td>
+              <td class="sku-cell">HF-LOU-01</td>
+              <td class="price-cell">₹1,299</td>
+              <td class="qty-cell">24</td>
+              <td><span class="status-badge in-stock">In Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="product-row-2">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-armchair.jpg" alt="Hale Bouclé Armchair" class="product-thumb"></td>
+              <td class="product-name-cell">Hale Bouclé Armchair</td>
+              <td class="sku-cell">HF-ARM-08</td>
+              <td class="price-cell">₹1,850</td>
+              <td class="qty-cell">12</td>
+              <td><span class="status-badge in-stock">In Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="product-row-3">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-cabinet.jpg" alt="Bastion Oak Cabinet" class="product-thumb"></td>
+              <td class="product-name-cell">Bastion Oak Cabinet</td>
+              <td class="sku-cell">HF-CAB-03</td>
+              <td class="price-cell">₹2,100</td>
+              <td class="qty-cell">4</td>
+              <td><span class="status-badge low-stock">Low Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="product-row-4">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-table.jpg" alt="Monolith Travertine Table" class="product-thumb"></td>
+              <td class="product-name-cell">Monolith Travertine Table</td>
+              <td class="sku-cell">HF-TAB-12</td>
+              <td class="price-cell">₹950</td>
+              <td class="qty-cell">15</td>
+              <td><span class="status-badge in-stock">In Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="product-row-5">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-bed.jpg" alt="Aura Slat Bed" class="product-thumb"></td>
+              <td class="product-name-cell">Aura Slat Bed</td>
+              <td class="sku-cell">HF-BED-09</td>
+              <td class="price-cell">₹2,400</td>
+              <td class="qty-cell">1</td>
+              <td><span class="status-badge low-stock">Low Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="product-row-6">
+              <td><input type="checkbox"></td>
+              <td><img src="images/product-lamp.jpg" alt="Arc Brass Floor Lamp" class="product-thumb"></td>
+              <td class="product-name-cell">Arc Brass Floor Lamp</td>
+              <td class="sku-cell">HF-LMP-04</td>
+              <td class="price-cell">₹680</td>
+              <td class="qty-cell">0</td>
+              <td><span class="status-badge out-of-stock">Out of Stock</span></td>
+              <td>
+                <div class="action-icons">
+                  <span class="action-icon" title="Edit"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+                  <span class="action-icon delete" title="Delete"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+          <button class="page-btn" id="page-prev">Previous</button>
+          <button class="page-btn active" id="page-1">1</button>
+          <button class="page-btn" id="page-2">2</button>
+          <button class="page-btn" id="page-next">Next</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
